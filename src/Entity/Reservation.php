@@ -28,6 +28,9 @@ class Reservation
     #[ORM\JoinColumn(nullable: false)]
     private ?Instructeur $instructeur = null;
 
+    #[ORM\Column]
+    private ?bool $payer = false;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -77,6 +80,18 @@ class Reservation
     public function setInstructeur(?Instructeur $instructeur): static
     {
         $this->instructeur = $instructeur;
+
+        return $this;
+    }
+
+    public function isPayer(): ?bool
+    {
+        return $this->payer;
+    }
+
+    public function setPayer(bool $payer): static
+    {
+        $this->payer = $payer;
 
         return $this;
     }

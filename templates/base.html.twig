@@ -2,15 +2,47 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Permis de conduire{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
         {% endblock %}
 
-        {% block javascripts %}
-        {% endblock %}
+        
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header class="p-3 bg-primary text-white">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+              
+
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="{{ path('app_home') }}" class="nav-link px-2 text-white">Accueil</a></li>
+                <li><a href="{{ path('app_reservations') }}" class="nav-link px-2 text-white">Réservation</a></li>
+                
+              </ul>
+
+              
+
+              <div class="text-end">
+                {% if app.user %}
+                  <a href="#" class="alert-link">{{app.user.nomcomplet}}</a>
+                  <a href="{{ path('app_logout') }}" class="btn btn-warning">Se déconneter</a>
+                {% else %}
+                  <a href="{{ path('app_login') }}" class="btn btn-outline-light me-2">Se connecter</a>
+                  <a href="{{ path('app_register') }}" class="btn btn-warning">S'inscrire</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </header>
+        {% block body %}
+
+
+        {% endblock %}
+        
+        {% block javascripts %}
+            <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

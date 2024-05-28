@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil | {{parent()}}{% endblock %}
+
+{% block body %}
+
+
+    <div class="container p-3">
+        <h1>Nouvelle réservation</h1>
+
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="alert alert-{{type}}">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <div class="row">
+            <div class="col-sm-6 mx-auto">
+            {{form_start(form)}}
+                {{form_widget(form)}}
+
+                <button type="submit" class="btn btn-primary m-3">Réserver</button>
+            {{form_end(form)}}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

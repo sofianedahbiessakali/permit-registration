@@ -1,0 +1,184 @@
+[26-May-2024 13:26:36 UTC] 2024-05-26T13:26:36+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 13:26:51 UTC] 2024-05-26T13:26:51+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 13:29:46 UTC] 2024-05-26T13:29:46+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 13:30:41 UTC] 2024-05-26T13:30:41+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 13:34:32 UTC] 2024-05-26T13:34:32+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 13:34:32 UTC] 2024-05-26T13:34:32+00:00 [critical] Uncaught Error: Class "Doctrine\ORM\Mapping\Driver\AnnotationDriver" not found
+[26-May-2024 13:47:45 UTC] [critical] Uncaught Error: Class "Doctrine\ORM\Mapping\Driver\AnnotationDriver" not found
+[26-May-2024 13:49:54 UTC] 2024-05-26T13:49:54+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 13:49:54 UTC] 2024-05-26T13:49:54+00:00 [critical] Uncaught Error: Class "Doctrine\ORM\Mapping\Driver\AnnotationDriver" not found
+[26-May-2024 13:53:25 UTC] 2024-05-26T13:53:25+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 13:53:25 UTC] 2024-05-26T13:53:25+00:00 [critical] Uncaught Error: Class "Doctrine\ORM\Mapping\Driver\AnnotationDriver" not found
+[26-May-2024 13:57:28 UTC] [critical] Uncaught Error: Class "Doctrine\ORM\Mapping\Driver\AnnotationDriver" not found
+[26-May-2024 14:24:31 UTC] 2024-05-26T14:24:31+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 14:25:56 UTC] 2024-05-26T14:25:56+00:00 [info] User Deprecated: Method "Symfony\Component\HttpKernel\Bundle\Bundle::build()" might add "void" as a native return type declaration in the future. Do the same in child class "Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle" now to avoid errors or add an explicit @return annotation to suppress this message.
+[26-May-2024 14:27:36 UTC] [critical] Error thrown while running command "'make:entities' Etudiant". Message: "Command "make:entities" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:crud
+    make:docker:database
+    make:entity
+    make:fixtures
+    make:form
+    make:functional-test
+    make:listener
+    make:message
+    make:messenger-middleware
+    make:migration
+    make:registration-form
+    make:reset-password
+    make:schedule
+    make:security:custom
+    make:security:form-login
+    make:serializer:encoder
+    make:serializer:normalizer
+    make:stimulus-controller
+    make:subscriber
+    make:test
+    make:twig-component
+    make:twig-extension
+    make:unit-test
+    make:user
+    make:validator
+    make:voter
+    make:webhook"
+[26-May-2024 17:07:31 UTC] [critical] Error thrown while running command "'make:security'". Message: "Command "make:security" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:crud
+    make:docker:database
+    make:entity
+    make:fixtures
+    make:form
+    make:functional-test
+    make:listener
+    make:message
+    make:messenger-middleware
+    make:migration
+    make:registration-form
+    make:reset-password
+    make:schedule
+    make:security:custom
+    make:security:form-login
+    make:serializer:encoder
+    make:serializer:normalizer
+    make:stimulus-controller
+    make:subscriber
+    make:test
+    make:twig-component
+    make:twig-extension
+    make:unit-test
+    make:user
+    make:validator
+    make:voter
+    make:webhook"
+[26-May-2024 23:22:10 UTC] [critical] Error thrown while running command "make:migration". Message: "An exception occurred in the driver: SQLSTATE[HY000] [1045] Access denied for user 'root'@'127.0.0.1' (using password: YES)"
+[26-May-2024 23:26:32 UTC] [critical] Error thrown while running command "'clear:cache'". Message: "There are no commands defined in the "clear" namespace."
+[26-May-2024 23:40:54 UTC] [critical] Error thrown while running command "'server:start'". Message: "There are no commands defined in the "server" namespace.
+
+You may be looking for a command provided by the "Debug Bundle" which is currently not installed. Try running "composer require symfony/debug-bundle --dev"."
+[27-May-2024 10:31:48 UTC] [critical] Error thrown while running command "'make:type'". Message: "Command "make:type" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:crud
+    make:docker:database
+    make:entity
+    make:fixtures
+    make:form
+    make:functional-test
+    make:listener
+    make:message
+    make:messenger-middleware
+    make:migration
+    make:registration-form
+    make:reset-password
+    make:schedule
+    make:security:custom
+    make:security:form-login
+    make:serializer:encoder
+    make:serializer:normalizer
+    make:stimulus-controller
+    make:subscriber
+    make:test
+    make:twig-component
+    make:twig-extension
+    make:unit-test
+    make:user
+    make:validator
+    make:voter
+    make:webhook"
+[27-May-2024 18:47:04 UTC] [critical] Error thrown while running command "'make:enity'". Message: "Command "make:enity" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:crud
+    make:docker:database
+    make:entity
+    make:fixtures
+    make:form
+    make:functional-test
+    make:listener
+    make:message
+    make:messenger-middleware
+    make:migration
+    make:registration-form
+    make:reset-password
+    make:schedule
+    make:security:custom
+    make:security:form-login
+    make:serializer:encoder
+    make:serializer:normalizer
+    make:stimulus-controller
+    make:subscriber
+    make:test
+    make:twig-component
+    make:twig-extension
+    make:unit-test
+    make:user
+    make:validator
+    make:voter
+    make:webhook"
+[28-May-2024 11:35:30 UTC] [critical] Error thrown while running command "make". Message: "Command "make" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:crud
+    make:docker:database
+    make:entity
+    make:fixtures
+    make:form
+    make:functional-test
+    make:listener
+    make:message
+    make:messenger-middleware
+    make:migration
+    make:registration-form
+    make:reset-password
+    make:schedule
+    make:security:custom
+    make:security:form-login
+    make:serializer:encoder
+    make:serializer:normalizer
+    make:stimulus-controller
+    make:subscriber
+    make:test
+    make:twig-component
+    make:twig-extension
+    make:unit-test
+    make:user
+    make:validator
+    make:voter
+    make:webhook"

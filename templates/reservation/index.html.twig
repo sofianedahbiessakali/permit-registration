@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil | {{parent()}}{% endblock %}
+
+{% block body %}
+
+
+    <div class="container p-3">
+        <h1>Bonjour {{app.user.nomcomplet}}</h1>
+
+        {% if reservation %}
+        Votre prochain séance de permis de conduite est le : {{reservation.date|date('d F Y à H:s')}} avec l'instructeur {{reservation.instructeur.nomcomplet}}
+        {% endif %}
+    </div>
+
+{% endblock %}

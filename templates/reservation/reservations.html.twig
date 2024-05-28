@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réservation {{parent()}}{% endblock %}
+
+{% block body %}
+
+
+    <div class="container p-3">
+        <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
+            <h1>Mes réservations</h1>
+            {% if is_granted('ROLE_ETUDIANT') %}
+                <div class="text-end">
+                    <a href="{{ path('app_reservation_new')}}" class="btn btn-primary">Réserver une séance</a>
+                </div>
+            {% endif %}
+        </div>
+
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="alert alert-{{type}}">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <div class="row mb-3">
+            
+            {% if is_granted('ROLE_ETUDIANT') %}
+                {% for reservation in reservations %}
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{reservation.libelle}}</h5>
+                            
+                            <p class="card-text">{{reservation.date|date("d F Y à H:s")}}<p>
+                            <span>{{reservation.instructeur.nomcomplet}}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% elseif is_granted('ROLE_INSTRUCTEUR') %}
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Etat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for reservation in reservations %}
+                            <tr>
+                                <th scope="row">{{reservation.id}}</th>
+                                <td>{{reservation.etudiant.nom}}</td>
+                                <td>{{reservation.etudiant.prenom}}</td>
+                                <td>{{reservation.date|date("d m Y à H:s")}}</td>
+                                <td>
+                                    {% if reservation.payer %}
+                                        <span class="badge rounded-pill bg-success">Payé</span>
+                                    {% else %}
+                                        <span class="badge rounded-pill bg-warning">En attente de payment</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% endif %}
+            {% if reservations is null %}
+                <div class="col-md-12">
+                    <p class="text-center">Vous n'avez aucun réservations</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

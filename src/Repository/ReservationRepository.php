@@ -16,6 +16,19 @@ class ReservationRepository extends ServiceEntityRepository
         parent::__construct($registry, Reservation::class);
     }
 
+    public function findRdvproche($user) : ?Reservation 
+    {
+        $now = new \DateTime();
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.etudiant = :user')
+            ->setParameter('user', $user)
+            ->andWhere('r.date > :date')
+            ->setParameter('date', $now)
+            ->orderBy('r.date', 'ASC')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
     //    /**
     //     * @return Reservation[] Returns an array of Reservation objects
     //     */

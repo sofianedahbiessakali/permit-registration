@@ -1,0 +1,87 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        
+        <title>Signin Template · Bootstrap v5.0</title>
+
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <style>
+            html,
+            body {
+            height: 100%;
+            }
+
+            body {
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            }
+
+            .form-signin {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px;
+            margin: auto;
+            }
+
+            .form-signin .checkbox {
+            font-weight: 400;
+            }
+
+            .form-signin .form-floating:focus-within {
+            z-index: 2;
+            }
+
+            </style>
+    </head>
+    <body class="text-center">
+    
+        <main class="form-signin">
+             {% if errors is defined %}
+                <ul>
+                {% for error in errors %}
+                    <li>{{ error.message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            <form action="{{ path('app_register') }}" method="POST">
+                {{ form_start(formuser) }}
+                <h1 class="h3 mb-3 fw-normal">Créer votre nouveau compte</h1>
+                <div class="form-floating">
+                    {{form_widget(formuser.nom)}}
+                    <label for="floatingInput">Nom</label>
+                </div>
+                <div class="form-floating">
+                    {{form_widget(formuser.prenom)}}
+                    <label for="floatingInput">Prénom</label>
+                </div>
+                <div class="form-floating">
+                    {{form_widget(formuser.email)}}
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    {{form_widget(formuser.telephone)}}
+                    <label for="floatingInput">Télephone</label>
+                </div>
+                <div class="form-floating">
+                    {{form_widget(formuser.password.first)}}
+                    <label for="floatingPassword">Mot de passe</label>
+                </div>
+                <div class="form-floating">
+                    {{form_widget(formuser.password.second)}}
+                    <label for="floatingPassword">Confirmer le mot de passe</label>
+                </div>
+                
+                <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">S'inscrire</button>
+                
+                <a href="{{ path('app_login') }}">Se connecter</a>
+            </form>
+        </main>
+
+        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    </body>
+</html>
